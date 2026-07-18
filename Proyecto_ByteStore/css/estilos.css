@@ -1,0 +1,1037 @@
+/* Estilos generales */
+body {
+  background-color: #080914;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menú principal */
+.menu-principal {
+  background-color: #101122;
+  border: 1px solid #00cfff;
+  border-radius: 10px 10px 0 0;
+}
+
+.logo {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo i {
+  color: #00d9ff;
+  margin-right: 8px;
+}
+
+.logo span {
+  color: #ff2f9f;
+}
+
+.nav-link {
+  color: #b9b9d3 !important;
+  font-weight: 600;
+  margin: 0 6px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #00d9ff !important;
+  border: 1px solid #00d9ff;
+  border-radius: 8px;
+}
+
+.btn-contacto {
+  background-color: #ff2f9f;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.btn-contacto:hover {
+  background-color: #00d9ff;
+  color: #080914;
+}
+
+/* Sección principal */
+.hero {
+  padding: 70px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: #00d9ff;
+  border: 1px solid #00d9ff;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 217, 255, 0.08);
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #00d9ff;
+}
+
+.hero p {
+  color: #a8a9c5;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.btn-celeste {
+  background-color: #00d9ff;
+  color: #080914;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 25px;
+}
+
+.btn-celeste:hover {
+  background-color: #ffffff;
+  color: #080914;
+}
+
+.btn-outline-rosa {
+  border: 1px solid #ff2f9f;
+  color: #ff2f9f;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 25px;
+  margin-left: 10px;
+}
+
+.btn-outline-rosa:hover {
+  background-color: #ff2f9f;
+  color: #ffffff;
+}
+
+/* Caja derecha del hero */
+.caja-hero {
+  background-color: #191a30;
+  border: 1px solid #008bc2;
+  border-radius: 18px;
+  padding: 70px 20px;
+}
+
+.caja-hero i {
+  font-size: 80px;
+  color: #00d9ff;
+}
+
+/* Secciones */
+.seccion {
+  padding: 35px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.titulo-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.titulo-seccion h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.titulo-seccion a {
+  color: #00d9ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Tarjetas de servicios */
+.tarjeta {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  min-height: 150px;
+}
+
+.tarjeta h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tarjeta p {
+  color: #a8a9c5;
+  margin: 0;
+}
+
+.icono {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.icono.celeste {
+  color: #00d9ff;
+  border: 1px solid #00d9ff;
+}
+
+.icono.rosa {
+  color: #ff2f9f;
+  border: 1px solid #ff2f9f;
+}
+
+/* Productos */
+.producto {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 18px;
+}
+
+.imagen-producto {
+  height: 160px;
+  border-bottom: 1px solid #09547a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-producto i {
+  font-size: 60px;
+  color: #00d9ff;
+}
+
+.producto h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 18px 18px 5px;
+}
+
+.producto p {
+  color: #00d9ff;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 18px 12px;
+}
+
+.btn-consultar {
+  display: block;
+  margin: 0 18px;
+  border: 1px solid #00d9ff;
+  color: #00d9ff;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn-consultar:hover {
+  background-color: #00d9ff;
+  color: #080914;
+}
+
+/* Footer */
+.footer {
+  background-color: #101122;
+  padding: 35px 0;
+}
+
+.footer h4 {
+  color: #00d9ff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer p {
+  color: #a8a9c5;
+  margin-bottom: 6px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .btn-outline-rosa {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .botones-hero .btn {
+    display: block;
+    width: 100%;
+  }
+
+  .caja-hero {
+    margin-top: 30px;
+  }
+
+  .titulo-seccion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* SECCION SERVICIOS TECNICOS */
+
+/* Encabezado de páginas internas */
+.hero-pagina {
+  padding: 55px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.hero-pagina h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.hero-pagina h1 span {
+  color: #00d9ff;
+}
+
+.hero-pagina p {
+  color: #a8a9c5;
+  font-size: 17px;
+}
+
+/* Tarjetas de servicios técnicos */
+.tarjeta-servicio {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  padding: 30px;
+  min-height: 230px;
+}
+
+.tarjeta-servicio h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.tarjeta-servicio p {
+  color: #a8a9c5;
+  margin: 25px 0;
+}
+
+.tarjeta-servicio a {
+  color: #00d9ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Caja de consultoría */
+.consultoria {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.consultoria h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.consultoria p {
+  color: #a8a9c5;
+  margin: 0;
+}
+
+/* Llamado a la acción */
+.cta-final {
+  padding: 30px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.cta-final h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cta-final p {
+  color: #a8a9c5;
+  margin: 0;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+  .consultoria {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* SECCION PRODUCTOS */
+
+/* Ruta superior */
+.ruta {
+  padding: 18px 0 5px;
+}
+
+.ruta p {
+  color: #a8a9c5;
+  margin: 0;
+  font-size: 14px;
+}
+
+.ruta span {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+/* Buscador y filtros */
+.filtros-productos {
+  padding: 15px 0 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.buscador {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buscador i {
+  color: #a8a9c5;
+}
+
+.buscador input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.buscador input::placeholder {
+  color: #a8a9c5;
+}
+
+.filtro-select {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  color: #a8a9c5;
+  height: 45px;
+}
+
+/* Categorías */
+.categorias-productos {
+  display: flex;
+  gap: 35px;
+  margin-top: 25px;
+}
+
+.categorias-productos a {
+  color: #a8a9c5;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 14px;
+}
+
+.categorias-productos a.activo,
+.categorias-productos a:hover {
+  color: #00d9ff;
+  border-bottom: 3px solid #00d9ff;
+}
+
+/* Texto pequeño de producto */
+.producto small {
+  color: #a8a9c5;
+  display: block;
+  margin: 0 18px 5px;
+}
+
+/* Íconos rosados */
+.rosa-icono i {
+  color: #ff2f9f;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.paginacion a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #09547a;
+  border-radius: 8px;
+  color: #00d9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.paginacion a.activo,
+.paginacion a:hover {
+  background-color: #00d9ff;
+  color: #080914;
+}
+
+/* Responsive productos */
+@media (max-width: 768px) {
+  .categorias-productos {
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 5px;
+  }
+}
+
+/* SECCION SISTEMAS PARA NEGOCIOS */
+
+/* Página de sistemas */
+.etiqueta-rosa {
+  color: #ff2f9f;
+  border-color: #ff2f9f;
+  background-color: rgba(255, 47, 159, 0.08);
+}
+
+.sistemas-contenedor {
+  border-bottom: 1px solid #083f5d;
+}
+
+/* Catálogo lateral */
+.catalogo-sistemas {
+  background-color: #101122;
+  border-right: 1px solid #09547a;
+  padding: 25px;
+}
+
+.catalogo-sistemas h4 {
+  color: #a8a9c5;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.item-catalogo {
+  display: block;
+  color: #a8a9c5;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.item-catalogo i {
+  margin-right: 10px;
+}
+
+.item-catalogo.activo,
+.item-catalogo:hover {
+  color: #00d9ff;
+  border: 1px solid #00d9ff;
+  background-color: rgba(0, 217, 255, 0.08);
+}
+
+/* Contenido de sistemas */
+.contenido-sistemas {
+  padding: 30px;
+}
+
+.bloque-sistema {
+  background-color: #101122;
+  border-bottom: 1px solid #083f5d;
+  padding: 35px 0;
+}
+
+.icono-sistema {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  padding: 50px 20px;
+}
+
+.icono-sistema i {
+  font-size: 70px;
+  color: #00d9ff;
+}
+
+.bloque-sistema h2 {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.bloque-sistema h2 span {
+  background-color: rgba(0, 217, 255, 0.15);
+  color: #00d9ff;
+  border: 1px solid #00d9ff;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 15px;
+  margin-left: 8px;
+}
+
+.bloque-sistema p {
+  color: #a8a9c5;
+}
+
+.bloque-sistema h3 {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.bloque-sistema p i {
+  color: #00d9ff;
+  margin-right: 10px;
+}
+
+.btn-whatsapp {
+  background-color: rgba(0, 255, 100, 0.08);
+  border: 1px solid #00c853;
+  color: #00c853;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 22px;
+  margin-left: 8px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #00c853;
+  color: #080914;
+}
+
+/* Responsive sistemas */
+@media (max-width: 768px) {
+  .catalogo-sistemas {
+    border-right: none;
+    border-bottom: 1px solid #09547a;
+  }
+
+  .contenido-sistemas {
+    padding: 20px;
+  }
+
+  .icono-sistema {
+    margin-bottom: 25px;
+  }
+
+  .btn-whatsapp {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/*SECCION SOPORTE*/
+
+/* Página soporte */
+.soporte-hero {
+  padding: 55px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.soporte-hero h1 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.soporte-hero h1 span {
+  color: #00d9ff;
+}
+
+.soporte-hero p {
+  color: #a8a9c5;
+}
+
+.buscador-soporte {
+  max-width: 700px;
+  margin: 25px auto 0;
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buscador-soporte i {
+  color: #a8a9c5;
+}
+
+.buscador-soporte input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  width: 100%;
+}
+
+.buscador-soporte input::placeholder {
+  color: #a8a9c5;
+}
+
+/* Categorías */
+.categoria-ayuda {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.categoria-ayuda.borde-rosa {
+  border-color: #ff2f9f;
+}
+
+.categoria-ayuda .icono {
+  margin: 0 auto 15px;
+}
+
+.categoria-ayuda h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.categoria-ayuda p {
+  color: #a8a9c5;
+  margin: 0;
+}
+
+/* Preguntas frecuentes */
+.faq-item {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 12px;
+}
+
+.faq-boton {
+  background-color: #191a30;
+  color: #ffffff;
+  border: 1px solid #09547a;
+  border-radius: 10px !important;
+  font-weight: bold;
+}
+
+.faq-boton:not(.collapsed) {
+  background-color: #191a30;
+  color: #00d9ff;
+  border-color: #00d9ff;
+}
+
+.accordion-body {
+  background-color: #191a30;
+  color: #a8a9c5;
+  border: 1px solid #09547a;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* Descargas */
+.descarga-item {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.descarga-item i {
+  color: #00d9ff;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.descarga-item strong {
+  color: #ffffff;
+}
+
+.descarga-item p {
+  color: #a8a9c5;
+  margin: 0 0 0 36px;
+}
+
+.descarga-item a {
+  color: #00d9ff;
+}
+
+.mesa-ayuda {
+  background-color: #191a30;
+  border: 1px solid #ff2f9f;
+  border-radius: 15px;
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.mesa-ayuda h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mesa-ayuda p {
+  color: #a8a9c5;
+}
+
+/* SECCION CONTACTO */
+
+/* Página contacto */
+.contacto-seccion {
+  border-bottom: 1px solid #083f5d;
+}
+
+.contacto-formulario {
+  padding: 35px;
+  border-right: 1px solid #083f5d;
+}
+
+.contacto-info {
+  padding: 35px;
+}
+
+.contacto-formulario h2,
+.contacto-info h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.contacto-formulario label {
+  color: #a8a9c5;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.campo-contacto {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.campo-contacto:focus {
+  background-color: #191a30;
+  color: #ffffff;
+  border-color: #00d9ff;
+  box-shadow: none;
+}
+
+.dato-contacto {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.dato-contacto .icono {
+  min-width: 50px;
+  height: 50px;
+  font-size: 22px;
+}
+
+.dato-contacto h4 {
+  font-size: 15px;
+  color: #a8a9c5;
+  margin: 0;
+}
+
+.dato-contacto p {
+  margin: 0;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.mapa-contacto {
+  height: 160px;
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapa-contacto i {
+  color: #ff2f9f;
+  font-size: 45px;
+}
+
+/* Responsive contacto */
+@media (max-width: 768px) {
+  .contacto-formulario {
+    border-right: none;
+    border-bottom: 1px solid #083f5d;
+  }
+}
+
+/*SECCION NOSOTROS*/
+
+/* Página Nosotros */
+.hero-nosotros {
+  padding: 55px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.hero-nosotros h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.hero-nosotros h1 span {
+  color: #ff2f9f;
+}
+
+.hero-nosotros p {
+  color: #a8a9c5;
+  font-size: 17px;
+  max-width: 850px;
+}
+
+.caja-nosotros {
+  background-color: #191a30;
+  border: 1px solid #ff2f9f;
+  border-radius: 15px;
+  padding: 50px 20px;
+}
+
+.caja-nosotros i {
+  color: #ff2f9f;
+  font-size: 70px;
+}
+
+/* Misión y visión */
+.mision-vision {
+  border-bottom: 1px solid #083f5d;
+}
+
+.bloque-mv {
+  padding: 35px;
+  border-right: 1px solid #083f5d;
+}
+
+.bloque-mv h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #00d9ff;
+}
+
+.bloque-mv:nth-child(2) h2 {
+  color: #ff2f9f;
+}
+
+.bloque-mv p {
+  color: #a8a9c5;
+}
+
+/* Indicadores */
+.indicadores {
+  padding: 25px 0;
+  border-bottom: 1px solid #083f5d;
+}
+
+.indicador {
+  border-right: 1px solid #083f5d;
+}
+
+.indicador:last-child {
+  border-right: none;
+}
+
+.indicador h3 {
+  color: #00d9ff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.rosa-texto {
+  color: #ff2f9f !important;
+}
+
+.indicador p {
+  color: #a8a9c5;
+  margin: 0;
+}
+
+/* Equipo */
+.equipo-card {
+  background-color: #191a30;
+  border: 1px solid #09547a;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  height: 100%;
+  min-height: 180px;
+}
+
+.equipo-card.borde-rosa {
+  border-color: #ff2f9f;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.avatar.celeste {
+  border: 2px solid #00d9ff;
+  color: #00d9ff;
+}
+
+.avatar.rosa {
+  border: 2px solid #ff2f9f;
+  color: #ff2f9f;
+}
+
+.equipo-card h3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.equipo-card p {
+  color: #a8a9c5;
+  margin: 0;
+}
+
+/* Responsive Nosotros */
+@media (max-width: 768px) {
+  .caja-nosotros {
+    margin-top: 25px;
+  }
+
+  .bloque-mv,
+  .indicador {
+    border-right: none;
+    border-bottom: 1px solid #083f5d;
+  }
+
+  .indicador {
+    padding: 18px 0;
+  }
+}
