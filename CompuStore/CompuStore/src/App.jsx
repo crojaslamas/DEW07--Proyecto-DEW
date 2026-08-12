@@ -14,20 +14,21 @@ import Carrito from "./pagina/Carrito";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Menu />
 
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/productos" element={<Productos />} />
-        <Route path="/contacto" element={<ContactoPage />} />
-        <Route path="/carrito" element={<Carrito />} />
-
-      </Routes>
+      <main className="contenido">
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/contacto" element={<ContactoPage />} />
+          <Route path="/carrito" element={<Carrito />} />
+        </Routes>
+      </main>
 
       <Wsp />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -238,36 +238,6 @@
   box-shadow: 0 0 8px rgba(0, 188, 255, 0.2);
 }
 
-.footer {
-  width: 100%;
-  padding: 60px;
-  background-color: #f6f7fa; /* O el color de fondo que prefieras */
-  display: flex;
-  justify-content: center;   /* Centra horizontalmente */
-  align-items: center;       /* Centra verticalmente */
-}
-
-/* Aplica Flexbox al div que contiene el texto */
-.footer > div {
-  display: flex;
-  flex-direction: row;        /* Pone los elementos en una sola línea */
-  align-items: center;
-  gap: 25px;                 /* Espacio amplio y limpio entre elementos */
-}
-
-.footer h3 {
-  margin: 0;
-  color: #00bcff;            /* Azul cian de COMPU-STORE */
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.footer p {
-  margin: 0;
-  color: #0c0101;            /* O #333333 si tu fondo es blanco */
-  font-size: 16px;
-}
-
 body{
   background: #000046;  /* Degradado color Canela y Menta */
   background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */

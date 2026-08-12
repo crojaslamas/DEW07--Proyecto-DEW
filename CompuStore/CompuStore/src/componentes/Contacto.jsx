@@ -98,7 +98,7 @@ function Contacto() {
               <div className="icono celeste"><i className="bi bi-envelope"></i></div>
               <div>
                 <h4>Correo</h4>
-                <p>info@bytestore.pe</p>
+                <p>info@compustore.pe</p>
               </div>
             </div>
 
