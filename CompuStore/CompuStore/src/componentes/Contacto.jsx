@@ -15,8 +15,11 @@ function Contacto() {
       {/*encabezado*/}
       <section className="hero-pagina">
         <div className="contenedor">
-          <span className="etiqueta">Estamos para ayudarte</span>
           <h1>Contáctanos</h1>
+          <p className="hero-pagina-subtitulo">
+            Estamos para ayudarte. Cuéntanos tu consulta y un especialista
+            te responderá a la brevedad.
+          </p>
         </div>
       </section>
 
