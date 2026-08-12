@@ -5,6 +5,7 @@ import "./estilos/carpetas.css";
 import Menu from "./componentes/Menu";
 import Footer from "./componentes/Footer";
 import Wsp from "./componentes/Wsp";
+import Toast from "./componentes/Toast";
 
 import Inicio from "./pagina/Inicio";
 import Productos from "./pagina/Productos";
@@ -27,6 +28,7 @@ function App() {
       </main>
 
       <Wsp />
+      <Toast />
       <Footer />
     </div>
   );

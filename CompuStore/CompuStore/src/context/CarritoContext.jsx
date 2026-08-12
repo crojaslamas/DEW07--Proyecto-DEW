@@ -1,10 +1,18 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useRef } from "react";
 
 export const CarritoContext = createContext();
 
 export function CarritoProvider({ children }) {
 
   const [carrito, setCarrito] = useState([]);
+  const [toast, setToast] = useState(null);
+  const timeoutRef = useRef(null);
+
+  function mostrarToast(mensaje) {
+    clearTimeout(timeoutRef.current);
+    setToast(mensaje);
+    timeoutRef.current = setTimeout(() => setToast(null), 3000);
+  }
 
   // Agregar producto
   function agregarProducto(producto) {
@@ -37,6 +45,8 @@ export function CarritoProvider({ children }) {
       ]);
 
     }
+
+    mostrarToast(`${producto.nombre} agregado al carrito`);
   }
 
   // Aumentar cantidad
@@ -108,7 +118,8 @@ export function CarritoProvider({ children }) {
         disminuirCantidad,
         eliminarProducto,
         total,
-        cantidad
+        cantidad,
+        toast
       }}
     >
 

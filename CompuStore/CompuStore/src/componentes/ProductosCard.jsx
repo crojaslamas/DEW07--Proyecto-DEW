@@ -13,9 +13,7 @@ function ProductoCard({ id, nombre, precio, imagen, descripcion }) {
       <h3>{nombre}</h3>
       <h4>S/{precio.toLocaleString('es-PE')}</h4>
       <p className="descripcion">{descripcion}</p>
-      <button onClick={() => agregarProducto({ id, nombre, precio, imagen },
-           alert(`Se ha agregado ${nombre} al carrito de compras`)
-      ) }>
+      <button onClick={() => agregarProducto({ id, nombre, precio, imagen })}>
         Añadir
       </button>
 

@@ -38,7 +38,7 @@ function Carrito() {
               <img src={item.imagen}  alt={item.nombre}/>
               <div>
                 <h3> {item.nombre} </h3>
-                <p> S/ {item.precio.toLocaleString()} </p>
+                <p> S/ {item.precio.toLocaleString('es-PE')} </p>
               </div>
               <button onClick={() => disminuirCantidad(item.id)}> - </button>
               <span>{item.cantidad}</span>
@@ -48,7 +48,7 @@ function Carrito() {
 
           ))}
 
-          <h2> Total: S/ {total.toLocaleString()} </h2>
+          <h2> Total: S/ {total.toLocaleString('es-PE')} </h2>
           <p className="hora-texto">Hora de compra: <span>{horaCompra}</span></p>
 
         </>
