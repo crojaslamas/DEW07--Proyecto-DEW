@@ -12,7 +12,9 @@ function Menu() {
   return (
     <header className="menu">
 
-      <h2 className="logo">COMPU-STORE</h2>
+      <NavLink to="/" className="logo-titulo">
+        <h2 className="logo">COMPU-STORE</h2>
+      </NavLink>
 
       <nav>
         <NavLink to="/">Inicio</NavLink>
