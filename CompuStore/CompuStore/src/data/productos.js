@@ -5,7 +5,7 @@ id:1,
 nombre:"Laptop ASUS S16",
 categoria:"Laptops",
 precio:3599,
-descripcion:"Laptop ASUS S16 con procesador Intel Core i7, 16GB de RAM y 512GB SSD. Ideal para trabajo y entretenimiento ffdfswfjwshefiusuighuerhguiore.",
+descripcion:"Laptop ASUS S16 con procesador Intel Core i7, 16GB de RAM y 512GB SSD. Ideal para trabajo y entretenimiento.",
 imagen:"/img/asus-s16.webp"
 },
 
