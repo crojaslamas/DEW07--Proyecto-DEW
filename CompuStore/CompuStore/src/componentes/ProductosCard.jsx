@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 
-function ProductoCard({ id, nombre, precio, imagen }) {
+function ProductoCard({ id, nombre, precio, imagen, descripcion }) {
 
   const { agregarProducto } = useContext(CarritoContext);
 
@@ -12,7 +12,10 @@ function ProductoCard({ id, nombre, precio, imagen }) {
       <img src={imagen} alt={nombre} />
       <h3>{nombre}</h3>
       <h4>S/{precio.toLocaleString('es-PE')}</h4>
-      <button onClick={() => agregarProducto({ id, nombre, precio, imagen }) }>
+      <p className="descripcion">{descripcion}</p>
+      <button onClick={() => agregarProducto({ id, nombre, precio, imagen },
+           alert(`Se ha agregado ${nombre} al carrito de compras`)
+      ) }>
         Añadir
       </button>
 

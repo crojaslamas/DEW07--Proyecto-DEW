@@ -155,14 +155,20 @@ a{
     background:#1d2038;
     border:1px solid #00c8ff;
     border-radius:10px;
-    padding:20px;
+    padding:5px;  
     text-align:center;
+    
+  
+}
 
+.card-producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .card-producto img{
-    width:180px;
-    height:180px;
+    width:200px;
+    height:200px;
     object-fit:contain;
 }
 
@@ -173,7 +179,7 @@ a{
 
 .card-producto h4{
     color:#00c8ff;
-    margin:15px 0;
+    margin:5px 0;
 }
 
 .card-producto button{
@@ -185,7 +191,7 @@ a{
     border-radius:6px;
     cursor:pointer;
     font-size: 20px;
-
+    margin-top: 20px; 
 }
 
 @media(max-width:900px){
