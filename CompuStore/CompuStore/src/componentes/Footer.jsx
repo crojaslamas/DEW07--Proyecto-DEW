@@ -25,7 +25,7 @@ function Footer() {
         <div className="footer-col">
           <h4>Contacto</h4>
           <p>Lima, Perú</p>
-          <p>+51 999 999 999</p>
+          <p>+51 949 520 382</p>
           <p>ventas@compustore.pe</p>
         </div>
 
