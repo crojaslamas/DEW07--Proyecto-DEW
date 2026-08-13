@@ -1,3 +1,9 @@
+// ==============================================
+// productos.js - Base de datos (simulada) de productos
+// Cada producto tiene: id, nombre, categoria, precio,
+// descripcion e imagen. Los datos son solo de ejemplo.
+// ==============================================
+
 const productos = [
 
 {
@@ -134,16 +140,6 @@ precio:3899,
 descripcion:"Laptop Asus Gaming V16 con procesador AMD Ryzen 7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3050. Ideal para gaming y productividad.",
 imagen:"/img/laptop-asus.jpg"
 },
-
-{
-id:16,
-nombre:"Victuc HP Laptop Gamer",
-categoria:"Componentes",
-precio:4899,
-descripcion:"Laptop Gamer Victuc HP con procesador Intel Core i7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3060. Perfecta para videojuegos.",
-imagen:"/img/laptop-victuc.png"
-},
-
 
 
 ];

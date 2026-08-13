@@ -1,17 +1,24 @@
+// ==============================================
+// Footer.jsx - Pie de pagina
+// Muestra informacion de la empresa en 4 columnas
+// ==============================================
+
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-contenido">
+        {/* Columna 1: nombre y descripcion */}
         <div className="footer-col">
           <h3>COMPU-STORE</h3>
           <p>
-            Tecnología confiable y de vanguardia para trabajo, estudio
-            y entretenimiento.
+            Tecnología confiable y de vanguardia para trabajo, estudio y
+            entretenimiento.
           </p>
         </div>
 
+        {/* Columna 2: enlaces de navegacion */}
         <div className="footer-col">
           <h4>Enlaces</h4>
           <ul>
@@ -22,13 +29,15 @@ function Footer() {
           </ul>
         </div>
 
+        {/* Columna 3: datos de contacto */}
         <div className="footer-col">
           <h4>Contacto</h4>
           <p>Lima, Perú</p>
-          <p>+51 949 520 382</p>
+          <p>+51 999 999 999</p>
           <p>ventas@compustore.pe</p>
         </div>
 
+        {/* Columna 4: horario de atencion */}
         <div className="footer-col">
           <h4>Horario</h4>
           <p>Lun - Vie: 9:00 - 20:00</p>
@@ -37,6 +46,7 @@ function Footer() {
         </div>
       </div>
 
+      {/* Barra inferior con el copyright (el año es automatico) */}
       <div className="footer-base">
         <p>
           &copy; {new Date().getFullYear()} COMPU-STORE. Todos los derechos

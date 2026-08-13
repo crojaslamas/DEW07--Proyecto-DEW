@@ -1,40 +1,52 @@
+// ==============================================
+// Contacto.jsx - Pagina de contacto
+// Formulario + informacion de la tienda + mapa
+// ==============================================
+
 import { useState } from "react";
 
 function Contacto() {
+  // estado para mostrar el mensaje de confirmacion despues de enviar
   const [mensaje, setMensaje] = useState("");
 
+  // Funcion que se ejecuta al enviar el formulario
   function manejarSubmit(e) {
-    e.preventDefault(); // evita recargar la página
-    alert("Gracias por comunicarte con ByteStore. Te responderemos pronto.");
-    e.target.reset();   // limpia los campos del formulario
-    setMensaje("✅ Mensaje enviado correctamente"); // muestra feedback en pantalla
+    e.preventDefault(); // evita que la pagina se recargue
+
+    alert("Gracias por comunicarte con CompuStore. Te responderemos pronto.");
+    e.target.reset(); // limpia los campos del formulario
+
+    // Muestra un feedback en pantalla (debajo del formulario)
+    setMensaje("✅ Mensaje enviado correctamente");
   }
 
   return (
     <>
-      {/*encabezado*/}
+      {/* Encabezado de la pagina */}
       <section className="hero-pagina">
         <div className="contenedor">
           <h1>Contáctanos</h1>
           <p className="hero-pagina-subtitulo">
-            Estamos para ayudarte. Cuéntanos tu consulta y un especialista
-            te responderá a la brevedad.
+            Estamos para ayudarte. Cuéntanos tu consulta y un especialista te
+            responderá a la brevedad.
           </p>
         </div>
       </section>
 
-      {/* Sección de contacto */}
+      {/* Seccion principal de contacto */}
       <section className="contacto-seccion">
         <div className="contenedor-contacto">
-          {/* Formulario */}
+          {/* Columna izquierda: formulario */}
           <div className="contacto-formulario">
             <h2>Envíanos un mensaje</h2>
+
             <form id="formularioContacto" onSubmit={manejarSubmit}>
               <div className="fila">
                 <div className="campo">
                   <label>Nombre</label>
                   <input type="text" className="campo-contacto" required />
                 </div>
+
                 <div className="campo">
                   <label>Apellido</label>
                   <input type="text" className="campo-contacto" required />
@@ -51,6 +63,7 @@ function Contacto() {
                 <input type="text" className="campo-contacto" required />
               </div>
 
+              {/* Select para elegir el motivo de la consulta */}
               <div className="campo">
                 <label>¿En qué podemos ayudarte?</label>
                 <select className="campo-contacto" required>
@@ -73,16 +86,18 @@ function Contacto() {
               </button>
             </form>
 
-            {/* Mensaje opcional en pantalla */}
+            {/* Mensaje que aparece despues de enviar el formulario */}
             {mensaje && <p className="mensaje-confirmacion">{mensaje}</p>}
           </div>
 
-          {/* Información de contacto */}
+          {/* Columna derecha: informacion de contacto */}
           <div className="contacto-info">
             <h2>Información de contacto</h2>
 
             <div className="dato-contacto">
-              <div className="icono celeste"><i className="bi bi-geo-alt"></i></div>
+              <div className="icono celeste">
+                <i className="bi bi-geo-alt"></i>
+              </div>
               <div>
                 <h4>Dirección</h4>
                 <p>Av. Garcilaso de la Vega 1337, Lima 15001, Perú</p>
@@ -90,7 +105,9 @@ function Contacto() {
             </div>
 
             <div className="dato-contacto">
-              <div className="icono rosa"><i className="bi bi-telephone"></i></div>
+              <div className="icono rosa">
+                <i className="bi bi-telephone"></i>
+              </div>
               <div>
                 <h4>Teléfono</h4>
                 <p>+51 949 520 382</p>
@@ -98,7 +115,9 @@ function Contacto() {
             </div>
 
             <div className="dato-contacto">
-              <div className="icono celeste"><i className="bi bi-envelope"></i></div>
+              <div className="icono celeste">
+                <i className="bi bi-envelope"></i>
+              </div>
               <div>
                 <h4>Correo</h4>
                 <p>info@compustore.pe</p>
@@ -106,15 +125,16 @@ function Contacto() {
             </div>
 
             <div className="dato-contacto">
-              <div className="icono rosa"><i className="bi bi-clock"></i></div>
+              <div className="icono rosa">
+                <i className="bi bi-clock"></i>
+              </div>
               <div>
                 <h4>Horario</h4>
                 <p>Lun–Sáb · 8am – 7pm</p>
               </div>
             </div>
 
-            
-
+            {/* Mapa embebido de Google Maps */}
             <div className="mapa-contacto">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.132710472375!2d-77.03630641585565!3d-12.055420280639481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c92ed7b3a703%3A0x5de309fa60dfb879!2spc%20Factory%20Real%20Plaza%20Centro%20C%C3%ADvico!5e0!3m2!1ses-419!2sus!4v1786265159188!5m2!1ses-419!2sus"
@@ -123,11 +143,14 @@ function Contacto() {
               ></iframe>
             </div>
 
-            
-            <a href="https://wa.me/51949520382" target="_blank" className="btn-whatsapp">
+            {/* Boton para escribir directamente por WhatsApp */}
+            <a
+              href="https://wa.me/51949520382"
+              target="_blank"
+              className="btn-whatsapp"
+            >
               <i className="bi bi-whatsapp"></i> Escribir por WhatsApp
             </a>
-
           </div>
         </div>
       </section>

@@ -1,20 +1,28 @@
+/* ==============================================
+   App.css - Estilos generales de la aplicacion
+   ============================================== */
+
+/* Reinicia los margenes y paddings por defecto del navegador */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* Estilos base del cuerpo de la pagina */
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0a0b16;
     color:white;
 }
 
+/* Los enlaces no llevan subrayado y son blancos */
 a{
     text-decoration:none;
     color:white;
 }
 
+/* Barra de navegacion fija arriba */
 .menu{
     position: sticky;
     top: 0;
