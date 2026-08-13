@@ -11,8 +11,8 @@ function ProductoCard({ id, nombre, precio, imagen, descripcion }) {
 
       <img src={imagen} alt={nombre} />
       <h3>{nombre}</h3>
-      <h4>S/{precio.toLocaleString('es-PE')}</h4>
       <p className="descripcion">{descripcion}</p>
+      <h4>S/{precio.toLocaleString('es-PE')}</h4>
       <button onClick={() => agregarProducto({ id, nombre, precio, imagen })}>
         Añadir
       </button>

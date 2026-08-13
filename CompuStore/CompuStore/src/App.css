@@ -321,6 +321,11 @@ a{
     margin:5px 0;
 }
 
+.card-producto p{
+    text-align:justify;
+    margin:5px 0;
+}
+
 .card-producto button{
     width:100%;
     padding:12px;

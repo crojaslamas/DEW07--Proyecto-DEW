@@ -14,7 +14,7 @@ id:2,
 nombre:"Lenovo LOQ Gen 10",
 categoria:"PCs",
 precio:7599,
-descripcion:"Computadora de escritorio Lenovo LOQ Gen 10 con procesador Intel Core i5, 16GB de RAM y 1TB HDD. Perfecta para gaming y productividad.",
+descripcion:"Computadora de escritorio con procesador Intel Core i5, 16GB de RAM y 1TB HDD. Perfecta para gaming y productividad.",
 imagen:"/img/lenovo-loq.avif"
 },
 
@@ -50,7 +50,7 @@ id:6,
 nombre:"RTX 5060",
 categoria:"Componentes",
 precio:1647,
-descripcion:"Tarjeta de video NVIDIA RTX 5060 con 8GB GDDR6. Perfecta para gaming y creación de contenido.",
+descripcion:"Tarjeta de video NVIDIA RTX 5060 con 8GB GDDR6. Perfecta para gaming y creación de contenido. ideal para juegos.",
 imagen:"/img/tarjeta-video1.webp"
 },
 
@@ -68,7 +68,7 @@ id:8,
 nombre:"AMD Ryzen 5 5600G",
 categoria:"Componentes",
 precio:899,
-descripcion:"Procesador AMD Ryzen 5 5600G con 6 núcleos y 12 hilos. Ideal para trabajo y entretenimiento.",
+descripcion:"Procesador AMD Ryzen 5 5600G con 6 núcleos y 12 hilos. Ideal para trabajo y entretenimiento.Rendimiento Integrados",
 imagen:"/img/ryzen5.jpg"
 },
 
@@ -95,7 +95,7 @@ id:11,
 nombre:"Victuc HP Laptop Gamer",
 categoria:"Componentes",
 precio:4899,
-descripcion:"Laptop Gamer Victuc HP con procesador Intel Core i7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3060. Perfecta para gaming y tareas de alto rendimiento.",
+descripcion:"Laptop Gamer Victuc HP con procesador Intel Core i7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3060. Perfecta para gaming.",
 imagen:"/img/laptop-victuc.png"
 },
 
@@ -140,7 +140,7 @@ id:16,
 nombre:"Victuc HP Laptop Gamer",
 categoria:"Componentes",
 precio:4899,
-descripcion:"Laptop Gamer Victuc HP con procesador Intel Core i7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3060. Perfecta para gaming y tareas de alto rendimiento.",
+descripcion:"Laptop Gamer Victuc HP con procesador Intel Core i7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3060. Perfecta para videojuegos.",
 imagen:"/img/laptop-victuc.png"
 },
 
