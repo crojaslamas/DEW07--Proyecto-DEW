@@ -49,7 +49,6 @@ function Productos() {
               />
           ))}
 
-         
           <button
             className="carrusel-btn anterior"
             onClick={anterior}
@@ -86,9 +85,9 @@ function Productos() {
         </h1>
 
         <h2>
-DESCUBRE TODO LO QUE TENEMOS PARA TI
+        DESCUBRE TODO LO QUE TENEMOS PARA TI
         </h2>
-
+      <br /><br />
       </div>
       <div className="contenedor-productos">
 
@@ -98,8 +97,8 @@ DESCUBRE TODO LO QUE TENEMOS PARA TI
               key={producto.id}
               id={producto.id}
               nombre={producto.nombre}
-              precio={producto.precio}
               descripcion={producto.descripcion}
+              precio={producto.precio}
               imagen={producto.imagen}
             />
 ))}

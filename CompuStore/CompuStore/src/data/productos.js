@@ -128,7 +128,7 @@ id:14,
 nombre:"Acer nitro 16ram",
 categoria:"Componentes",
 precio:4899,
-descripcion:"Laptop Acer Nitro con 16GB de RAM, procesador Intel Core i7 y tarjeta gráfica NVIDIA GTX 1650. Perfecta para gaming y multitarea.",
+descripcion:"Laptop Acer Nitro con 16GB de RAM, procesador Intel Core i7 y tarjeta gráfica NVIDIA GTX 1650. Perfecta para gaming.",
 imagen:"/img/laptop-acer.webp"
 },
 
@@ -137,7 +137,7 @@ id:15,
 nombre:"Asus gaming v16",
 categoria:"Componentes",
 precio:3899,
-descripcion:"Laptop Asus Gaming V16 con procesador AMD Ryzen 7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3050. Ideal para gaming y productividad.",
+descripcion:"Laptop Asus Gaming V16 con procesador AMD Ryzen 7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3050. Ideal para gaming.",
 imagen:"/img/laptop-asus.jpg"
 },
 

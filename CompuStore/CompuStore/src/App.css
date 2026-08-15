@@ -321,7 +321,7 @@ a{
 
 .card-producto h3{
     margin-top:15px;
-    min-height:50px;
+    min-height:30px;
 }
 
 .card-producto h4{
@@ -331,7 +331,7 @@ a{
 
 .card-producto p{
     text-align:justify;
-    margin:5px 0;
+    margin:15px 0;
 }
 
 .card-producto button{
