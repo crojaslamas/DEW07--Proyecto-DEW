@@ -594,6 +594,32 @@ color:white;
   display: block;
 }
 
+/* Carrusel del inicio (Hero): se muestra al mismo tamaño de la imagen
+   (1024x572), sin recortar, y se mantiene al lado derecho del texto */
+.hero .hero-imagen {
+  width: 50%;
+  max-width: 1024px;
+}
+
+.hero .carrusel {
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  aspect-ratio: 1024 / 572;
+  margin: 0;
+}
+
+.hero .carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.hero .carrusel img.activa {
+  display: block;
+}
+
 .titulo-productos {
   margin-top: 5px;
   padding-top: 0;
