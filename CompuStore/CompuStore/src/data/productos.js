@@ -141,6 +141,14 @@ descripcion:"Laptop Asus Gaming V16 con procesador AMD Ryzen 7, 16GB de RAM y ta
 imagen:"/img/laptop-asus.jpg"
 },
 
+{
+id:7,
+nombre:"HP Smart Tank",
+categoria:"PCs",
+precio:939,
+descripcion:"Impresora HP Smart Tank con conectividad inalámbrica y tanque de tinta recargable. Ideal para impresión de alta calidad y bajo costo.",
+imagen:"/img/hp-smart.png"
+},
 
 ];
 

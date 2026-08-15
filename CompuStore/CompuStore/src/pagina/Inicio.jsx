@@ -20,7 +20,7 @@ function Inicio() {
           {/* Cada ProductoCard es una tarjeta con los datos del producto */}
           <ProductoCard nombre="Laptop ASUS S16" descripcion="Laptop ASUS S16 con procesador Intel Core i7, 16GB de RAM y 512GB SSD. Ideal para trabajo y entretenimiento." precio={3599} imagen="/img/asus-s16.webp" />
           <ProductoCard nombre="Lenovo LOQ" descripcion="Laptop Lenovo LOQ con procesador AMD Ryzen 7, 16GB de RAM y tarjeta gráfica NVIDIA RTX 3050. Ideal para gaming." precio={7599} imagen="/img/lenovo-loq.avif" />
-          <ProductoCard nombre="Ryzen 7" descripcion="Procesador AMD Ryzen 7 con 8 núcleos y 16 hilos. Ideal para trabajo intensivo y gaming." precio={2399} imagen="/img/ryzen7.avif" />
+          <ProductoCard nombre="Ryzen 7" descripcion="Procesador AMD Ryzen 7 con 8 núcleos y 16 hilos.  Ideal para estudiantes con tareas de alto rendimiento y gaming." precio={2399} imagen="/img/ryzen7.avif" />
           <ProductoCard nombre="Teclado Logitech" descripcion="Teclado mecánico Logitech con switches Cherry MX. Ideal para gaming y productividad." precio={899} imagen="/img/logitech.webp" />
         </div>
       </section>
