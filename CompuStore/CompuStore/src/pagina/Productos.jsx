@@ -7,9 +7,9 @@ function Productos() {
   const navigate = useNavigate();
 
   const imagenes = [
-    "img/imagen1.jpg",
+    "img/imageN1.jpg",
     "img/imagen2.jpg",
-    "img/imagen3.jpg",
+    "img/image5.jpg",
   ];
 
   const [indice, setIndice] = useState(0);
