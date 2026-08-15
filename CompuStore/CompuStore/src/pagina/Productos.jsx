@@ -9,7 +9,7 @@ function Productos() {
   const imagenes = [
     "img/imagen1.jpg",
     "img/imagen2.jpg",
-    "img/imagen3.jpg",
+    "img/imagen5.jpg",
   ];
 
   const [indice, setIndice] = useState(0);
