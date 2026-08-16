@@ -620,6 +620,30 @@ color:white;
   display: block;
 }
 
+/* Carrusel de la pagina Productos: centrado y un poco mas grande que la
+   imagen, para que la imagen quede con un pequeno margen alrededor */
+.pagina-productos .hero-imagen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagina-productos .carrusel {
+  width: 100%;
+  max-width: 1400px;
+  height: 480px;
+  margin: 0 auto;
+}
+
+.pagina-productos .carrusel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .titulo-productos {
   margin-top: 5px;
   padding-top: 0;
@@ -646,10 +670,22 @@ color:white;
 }
 
 .titulo-principal span {
-  font-family: "Orbitron", sans-serif;
+  /* Mismo diseño que el logo COMPU-STORE: degradado animado */
+  font-family: 'Electrolize', sans-serif;
   font-weight: 900;
   letter-spacing: 3px;
-   color:#130b01;
+  background: linear-gradient(
+    90deg,
+    #00bcff,
+    #7000ff,
+    #ff007f,
+    #00bcff
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animarColores 6s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(0, 188, 255, 0.4));
 }
 
 .hero-imagen {

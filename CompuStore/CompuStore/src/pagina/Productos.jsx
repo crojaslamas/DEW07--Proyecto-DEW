@@ -7,9 +7,12 @@ function Productos() {
   const navigate = useNavigate();
 
   const imagenes = [
-    "img/imagen1.jpg",
-    "img/imagen2.jpg",
-    "img/imagen5.jpg",
+    "img/promo01.png",
+    "img/promo02.png",
+    "img/promo03.png",
+    "img/promo04.png",
+    "img/promo05.png",
+    "img/promo06.png",
   ];
 
   const [indice, setIndice] = useState(0);
