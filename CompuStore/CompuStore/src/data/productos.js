@@ -142,12 +142,12 @@ imagen:"/img/laptop-asus.jpg"
 },
 
 {
-id:7,
-nombre:"HP Smart Tank",
-categoria:"PCs",
-precio:939,
-descripcion:"Impresora HP Smart Tank con conectividad inalámbrica y tanque de tinta recargable. Ideal para impresión de alta calidad y bajo costo.",
-imagen:"/img/hp-smart.png"
+id:16,
+nombre:"PlayStation 5",
+categoria:"Consolas",
+precio:2699,
+descripcion:"Consola PlayStation 5 con 1TB de almacenamiento, control DualSense y gráficos 4K. Ideal para los gamers más exigentes.",
+imagen:"/img/ps5-01.jpg"
 },
 
 ];

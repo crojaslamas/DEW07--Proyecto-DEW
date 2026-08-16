@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import productos from "../data/productos";
 import ProductoCard from "../componentes/ProductosCard";
-import { useNavigate } from "react-router-dom";
 
 function Productos() {
-  const navigate = useNavigate();
 
   const imagenes = [
     "img/promo01.png",

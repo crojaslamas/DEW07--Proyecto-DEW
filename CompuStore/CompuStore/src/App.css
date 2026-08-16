@@ -684,6 +684,7 @@ color:white;
   background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #130b01;
   animation: animarColores 6s linear infinite;
   filter: drop-shadow(0 0 6px rgba(0, 188, 255, 0.4));
 }
