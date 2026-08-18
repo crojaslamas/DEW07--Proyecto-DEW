@@ -1,7 +1,7 @@
-// ==============================================
+
 // Contacto.jsx - Pagina de contacto
 // Formulario + informacion de la tienda + mapa
-// ==============================================
+
 
 import { useState } from "react";
 
