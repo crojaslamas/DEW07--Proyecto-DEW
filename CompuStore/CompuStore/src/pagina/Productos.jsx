@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import productos from "../data/productos";
 import ProductoCard from "../componentes/ProductosCard";
 
-function Productos() {
+const imagenes = [
+  "img/promo01.png",
+  "img/promo02.png",
+  "img/promo03.png",
+  "img/promo04.png",
+  "img/promo05.png",
+  "img/promo06.png",
+];
 
-  const imagenes = [
-    "img/promo01.png",
-    "img/promo02.png",
-    "img/promo03.png",
-    "img/promo04.png",
-    "img/promo05.png",
-    "img/promo06.png",
-  ];
+function Productos() {
 
   const [indice, setIndice] = useState(0);
 
