@@ -256,3 +256,13 @@ body{
 }
 
 
+
+/*Cuando la validación es correcta */
+.pista.ok {
+  color: green;       
+}
+
+/* Cuando la validación es incorrecta */
+.pista.mal {
+  color: red;         
+}

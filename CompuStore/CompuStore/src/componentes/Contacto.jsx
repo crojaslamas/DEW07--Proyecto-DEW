@@ -1,7 +1,13 @@
 import { useState } from "react";
 
 function Contacto() {
-  // Estados del formulario
+  // Regex de validación
+  const regexNombre   = /^[a-zA-Z\s]+$/;
+  const regexCorreo   = /^[^@\s]+@[^@\s]+\.[a-z]{2,}$/;
+  const regexTelefono = /^9\d{8}$/;
+  const regexMensaje  = /^.{10,}$/; 
+
+  // Estados
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
@@ -11,36 +17,28 @@ function Contacto() {
   const [error, setError] = useState("");
   const [exito, setExito] = useState("");
 
-  // Manejo del envío con validaciones
+  // Validaciones con regex
+  const nombreOk   = regexNombre.test(nombre);
+  const apellidoOk = regexNombre.test(apellido);
+  const correoOk   = regexCorreo.test(correo);
+  const telefonoOk = regexTelefono.test(telefono);
+  const mensajeOk  = regexMensaje.test(mensajeTexto);
+
+  function clase(valor, ok) {
+    if (valor === "") return "";
+    return ok ? "ok" : "mal";
+  }
+
   function manejarSubmit(e) {
     e.preventDefault();
     setError("");
     setExito("");
 
-    // Validaciones personalizadas
-    if (
-      nombre.trim() === "" ||
-      apellido.trim() === "" ||
-      correo.trim() === "" ||
-      telefono.trim() === "" ||
-      opcion.trim() === "" ||
-      mensajeTexto.trim() === ""
-    ) {
-      setError("Todos los campos son obligatorios.");
+    if (!nombreOk || !apellidoOk || !correoOk || !telefonoOk || opcion === "" || !mensajeOk) {
+      setError("Todos los campos obligatorios .");
       return;
     }
 
-    if (!correo.includes("@")) {
-      setError("El correo debe contener un @.");
-      return;
-    }
-
-    if (opcion === "") {
-      setError("Selecciona una opción en el campo de ayuda.");
-      return;
-    }
-
-    // Si todo está bien
     setExito("✅ Mensaje enviado correctamente, " + nombre);
     setNombre("");
     setApellido("");
@@ -53,7 +51,7 @@ function Contacto() {
 
   return (
     <>
-      {/* Encabezado */}
+      {/* Hero encabezado */}
       <section className="hero-pagina">
         <div className="contenedor">
           <h1>Contáctanos</h1>
@@ -61,98 +59,119 @@ function Contacto() {
             Estamos para ayudarte. Cuéntanos tu consulta y un especialista
             te responderá a la brevedad.
           </p>
+          
         </div>
       </section>
 
       {/* Sección de contacto */}
       <section className="contacto-seccion">
-        <div className="contenedor-contacto">
-          {/* Formulario */}
-          <div className="contacto-formulario">
-            <h2>Envíanos un mensaje</h2>
-            <form id="formularioContacto" onSubmit={manejarSubmit}>
-              <div className="fila">
-                <div className="campo">
-                  <label>Nombre</label>
-                  <input
-                    type="text"
-                    className="campo-contacto"
-                    value={nombre}
-                    onChange={(e) => setNombre(e.target.value)}
-                    placeholder="Tu nombre"
-                  />
+        <div className="contenedor">
+          <div className="contenedor-contacto">
+            
+            {/* Formulario */}
+            <div className="contacto-formulario">
+              <h2>Envíanos un mensaje</h2>
+              <form id="formularioContacto" onSubmit={manejarSubmit}>
+                
+                <div className="fila">
+                  <div className="campo">
+                    <label>Nombre</label>
+                    <input 
+                      className={`campo-contacto ${clase(nombre, nombreOk)}`} 
+                      value={nombre}
+                      onChange={(e) => setNombre(e.target.value)}
+                      placeholder="Tu nombre" 
+                    />
+                    {nombre !== "" && (
+                      <p className={"pista " + (nombreOk ? "ok" : "mal")}>
+                        {nombreOk ? "Correcto" : "Solo letras y espacios"}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="campo">
+                    <label>Apellido</label>
+                    <input 
+                      className={`campo-contacto ${clase(apellido, apellidoOk)}`} 
+                      value={apellido}
+                      onChange={(e) => setApellido(e.target.value)}
+                      placeholder="Tu apellido" 
+                    />
+                    {apellido !== "" && (
+                      <p className={"pista " + (apellidoOk ? "ok" : "mal")}>
+                        {apellidoOk ? "Correcto" : "Solo letras y espacios"}
+                      </p>
+                    )}
+                  </div>
                 </div>
+
                 <div className="campo">
-                  <label>Apellido</label>
-                  <input
-                    type="text"
-                    className="campo-contacto"
-                    value={apellido}
-                    onChange={(e) => setApellido(e.target.value)}
-                    placeholder="Tu apellido"
+                  <label>Correo electrónico</label>
+                  <input 
+                    className={`campo-contacto ${clase(correo, correoOk)}`} 
+                    value={correo}
+                    onChange={(e) => setCorreo(e.target.value)}
+                    placeholder="tucorreo@ejemplo.com" 
                   />
+                  {correo !== "" && (
+                    <p className={"pista " + (correoOk ? "ok" : "mal")}>
+                      {correoOk ? "Correcto" : "Formato de correo inválido"}
+                    </p>
+                  )}
                 </div>
-              </div>
 
-              <div className="campo">
-                <label>Correo electrónico</label>
-                <input
-                  type="text"
-                  className="campo-contacto"
-                  value={correo}
-                  onChange={(e) => setCorreo(e.target.value)}
-                  placeholder="tucorreo@ejemplo.com"
-                />
-              </div>
+                <div className="campo">
+                  <label>Teléfono / WhatsApp</label>
+                  <input 
+                    className={`campo-contacto ${clase(telefono, telefonoOk)}`} 
+                    value={telefono}
+                    onChange={(e) => setTelefono(e.target.value)}
+                    placeholder="9XXXXXXXXX" 
+                  />
+                  {telefono !== "" && (
+                    <p className={"pista " + (telefonoOk ? "ok" : "mal")}>
+                      {telefonoOk ? "Correcto" : "Debe empezar con 9 y tener 9 dígitos"}
+                    </p>
+                  )}
+                </div>
 
-              <div className="campo">
-                <label>Teléfono / WhatsApp</label>
-                <input
-                  type="text"
-                  className="campo-contacto"
-                  value={telefono}
-                  onChange={(e) => setTelefono(e.target.value)}
-                  placeholder="Tu número"
-                />
-              </div>
+                <div className="campo">
+                  <label>¿En qué podemos ayudarte?</label>
+                  <select 
+                    className={`campo-contacto ${opcion === "" ? "mal" : "ok"}`} 
+                    value={opcion}
+                    onChange={(e) => setOpcion(e.target.value)}
+                  >
+                    <option value="">Seleccionar...</option>
+                    <option>Consulta sobre productos</option>
+                    <option>Consulta sobre sistemas</option>
+                    <option>Soporte técnico</option>
+                    <option>Instalación de programas</option>
+                    <option>Otros</option>
+                  </select>
+                </div>
+                
+                <div className="campo">
+                  <label>Mensaje</label>
+                  <textarea 
+                    className={`campo-contacto ${clase(mensajeTexto, mensajeOk)}`} 
+                    rows="5"
+                    value={mensajeTexto}
+                    onChange={(e) => setMensajeTexto(e.target.value)}
+                    placeholder="Escribe tu mensaje aquí..." 
+                  />
+                  
+                </div>
 
-              <div className="campo">
-                <label>¿En qué podemos ayudarte?</label>
-                <select
-                  className="campo-contacto"
-                  value={opcion}
-                  onChange={(e) => setOpcion(e.target.value)}
-                >
-                  <option value="">Seleccionar...</option>
-                  <option>Consulta sobre productos</option>
-                  <option>Consulta sobre sistemas</option>
-                  <option>Soporte técnico</option>
-                  <option>Instalación de programas</option>
-                  <option>Otros</option>
-                </select>
-              </div>
+                {/* Mensajes dinámicos */}
+                {error && <p className="error">{error}</p>}
+                {exito && <p className="exito">{exito}</p>}
 
-              <div className="campo">
-                <label>Mensaje</label>
-                <textarea
-                  className="campo-contacto"
-                  rows="5"
-                  value={mensajeTexto}
-                  onChange={(e) => setMensajeTexto(e.target.value)}
-                  placeholder="Escribe tu mensaje aquí..."
-                ></textarea>
-              </div>
-
-              {/* Mensajes dinámicos */}
-              {error && <p className="error">{error}</p>}
-              {exito && <p className="exito">{exito}</p>}
-
-              <button type="submit" className="btn-enviar">
-                Enviar mensaje
-              </button>
-            </form>
-          </div>
-          
+                <button type="submit" className="btn-enviar">
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
           {/* Información de contacto */}
           <div className="contacto-info">
             <h2>Información de contacto</h2>
@@ -205,6 +224,7 @@ function Contacto() {
             </a>
 
           </div>
+        </div>
         </div>
       </section>
     </>
