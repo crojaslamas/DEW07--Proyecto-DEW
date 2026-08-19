@@ -5,7 +5,7 @@ function Contacto() {
   const regexNombre   = /^[a-zA-Z\s]+$/;
   const regexCorreo   = /^[^@\s]+@[^@\s]+\.[a-z]{2,}$/;
   const regexTelefono = /^9\d{8}$/;
-  const regexMensaje  = /^.{10,}$/; 
+  const regexMensaje  = /^.{20,}$/; 
 
   // Estados
   const [nombre, setNombre] = useState("");
@@ -24,11 +24,13 @@ function Contacto() {
   const telefonoOk = regexTelefono.test(telefono);
   const mensajeOk  = regexMensaje.test(mensajeTexto);
 
+  // Función para asignar clase según validación
   function clase(valor, ok) {
     if (valor === "") return "";
     return ok ? "ok" : "mal";
   }
 
+  // Manejo del envío del formulario
   function manejarSubmit(e) {
     e.preventDefault();
     setError("");
@@ -59,7 +61,6 @@ function Contacto() {
             Estamos para ayudarte. Cuéntanos tu consulta y un especialista
             te responderá a la brevedad.
           </p>
-          
         </div>
       </section>
 
@@ -73,6 +74,7 @@ function Contacto() {
               <h2>Envíanos un mensaje</h2>
               <form id="formularioContacto" onSubmit={manejarSubmit}>
                 
+                {/* Nombre y Apellido */}
                 <div className="fila">
                   <div className="campo">
                     <label>Nombre</label>
@@ -105,6 +107,7 @@ function Contacto() {
                   </div>
                 </div>
 
+                {/* Correo */}
                 <div className="campo">
                   <label>Correo electrónico</label>
                   <input 
@@ -120,6 +123,7 @@ function Contacto() {
                   )}
                 </div>
 
+                {/* Teléfono */}
                 <div className="campo">
                   <label>Teléfono / WhatsApp</label>
                   <input 
@@ -135,6 +139,7 @@ function Contacto() {
                   )}
                 </div>
 
+                {/* Opción de ayuda */}
                 <div className="campo">
                   <label>¿En qué podemos ayudarte?</label>
                   <select 
@@ -151,6 +156,7 @@ function Contacto() {
                   </select>
                 </div>
                 
+                {/* Mensaje */}
                 <div className="campo">
                   <label>Mensaje</label>
                   <textarea 
@@ -160,13 +166,18 @@ function Contacto() {
                     onChange={(e) => setMensajeTexto(e.target.value)}
                     placeholder="Escribe tu mensaje aquí..." 
                   />
-                  
+                  {mensajeTexto !== "" && (
+                    <p className={"pista " + (mensajeOk ? "ok" : "mal")}>
+                      {mensajeOk ? "Correcto" : "Debe contener al menos 20 caracteres"}
+                    </p>
+                  )}
                 </div>
 
                 {/* Mensajes dinámicos */}
                 {error && <p className="error">{error}</p>}
                 {exito && <p className="exito">{exito}</p>}
 
+                {/* Botón */}
                 <button type="submit" className="btn-enviar">
                   Enviar mensaje
                 </button>
