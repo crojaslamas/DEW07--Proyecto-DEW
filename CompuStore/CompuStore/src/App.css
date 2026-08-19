@@ -597,13 +597,13 @@ color:white;
 /* Carrusel del inicio (Hero): se muestra al mismo tamaño de la imagen
    (1024x572), sin recortar, y se mantiene al lado derecho del texto */
 .hero .hero-imagen {
-  width: 50%;
-  max-width: 1024px;
+  width: 60%;
+  max-width: 1400px;
 }
 
 .hero .carrusel {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1400px;
   height: auto;
   aspect-ratio: 1024 / 572;
   margin: 0;
