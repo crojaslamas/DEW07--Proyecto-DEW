@@ -271,3 +271,103 @@ color: green;
 .pista.mal {
 color: red; 
 }
+
+
+
+/* ===== Botón hamburguesa ===== */
+.hamburguesa {
+  display: none; 
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 28px;
+  height: 3px;
+  background: #000; 
+  transition: 0.3s;
+}
+
+/* Animación a "X" */
+.hamburguesa.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguesa.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== Menú en escritorio ===== */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* ===== Menú en móviles ===== */
+@media (max-width: 768px) {
+  .menu {
+    padding: 15px 30px;
+  }
+
+  .hamburguesa {
+    display: flex; /* aparece en móviles */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: none;
+    width: 220px; 
+  }
+
+  .nav-links.show {
+    display: flex; 
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .icono-carrito {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .icono-carrito img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .icono-carrito span {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 12px;
+  }
+}

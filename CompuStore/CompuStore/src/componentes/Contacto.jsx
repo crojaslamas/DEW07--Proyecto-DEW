@@ -17,7 +17,7 @@ function Contacto() {
   const [mensajeTexto, setMensajeTexto] = useState("");
   const [error, setError] = useState("");
   const [exito, setExito] = useState("");
-  const [mensaje, setMensaje] = useState("");
+  
 
 
   // Validaciones con regex
@@ -45,7 +45,7 @@ function Contacto() {
 
     setError("");
     setExito("✅ Mensaje enviado correctamente, " + nombre);
-    setMensaje("✅ Mensaje enviado correctamente");
+   
 
     // Limpiar estados
     setNombre("");
@@ -173,7 +173,7 @@ function Contacto() {
               </div>
 
               {/* Mensajes dinámicos */}
-              {mensaje && <p className="mensaje-confirmacion">{mensaje}</p>}
+             
               {error && <p className="error">{error}</p>}
               {exito && <p className="exito">{exito}</p>}
 
