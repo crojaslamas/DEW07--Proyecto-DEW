@@ -259,3 +259,15 @@ body{
   background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+
+/*Cuando la validación es correcta */
+.pista.ok {
+color: green; 
+}
+
+
+/* Cuando la validación es incorrecta */
+.pista.mal {
+color: red; 
+}

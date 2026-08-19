@@ -1,72 +1,151 @@
 
-// Contacto.jsx - Pagina de contacto
-// Formulario + informacion de la tienda + mapa
-
-
 import { useState } from "react";
 
 function Contacto() {
-  // estado para mostrar el mensaje de confirmacion despues de enviar
+  // Regex de validación
+  const regexNombre   = /^[a-zA-Z\s]+$/;
+  const regexCorreo   = /^[^@\s]+@[^@\s]+\.[a-z]{2,}$/;
+  const regexTelefono = /^9\d{8}$/;
+  const regexMensaje  = /^.{20,}$/;
+
+  // Estados
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [opcion, setOpcion] = useState("");
+  const [mensajeTexto, setMensajeTexto] = useState("");
+  const [error, setError] = useState("");
+  const [exito, setExito] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  // Funcion que se ejecuta al enviar el formulario
+
+  // Validaciones con regex
+  const nombreOk   = regexNombre.test(nombre);
+  const apellidoOk = regexNombre.test(apellido);
+  const correoOk   = regexCorreo.test(correo);
+  const telefonoOk = regexTelefono.test(telefono);
+  const mensajeOk  = regexMensaje.test(mensajeTexto);
+
+  // Función para asignar clase según validación
+  function clase(valor, ok) {
+    if (valor === "") return "";
+    return ok ? "ok" : "mal";
+  }
+
+  // Manejo del envío del formulario
   function manejarSubmit(e) {
-    e.preventDefault(); // evita que la pagina se recargue
+    e.preventDefault();
 
-    alert("Gracias por comunicarte con CompuStore. Te responderemos pronto.");
-    e.target.reset(); // limpia los campos del formulario
+    if (!nombreOk || !apellidoOk || !correoOk || !telefonoOk || opcion === "" || !mensajeOk) {
+      setError("Todos los campos obligatorios.");
+      setExito("");
+      return;
+    }
 
-    // Muestra un feedback en pantalla (debajo del formulario)
+    setError("");
+    setExito("✅ Mensaje enviado correctamente, " + nombre);
     setMensaje("✅ Mensaje enviado correctamente");
+
+    // Limpiar estados
+    setNombre("");
+    setApellido("");
+    setCorreo("");
+    setTelefono("");
+    setOpcion("");
+    setMensajeTexto("");
+    e.target.reset();
   }
 
   return (
     <>
-      {/* Encabezado de la pagina */}
+      {/* Hero encabezado */}
       <section className="hero-pagina">
         <div className="contenedor">
           <h1>Contáctanos</h1>
-          <p className="hero-pagina-subtitulo">
-            Estamos para ayudarte. Cuéntanos tu consulta y un especialista te
-            responderá a la brevedad.
-          </p>
         </div>
       </section>
 
-      {/* Seccion principal de contacto */}
+      {/* Sección de contacto */}
       <section className="contacto-seccion">
         <div className="contenedor-contacto">
-          {/* Columna izquierda: formulario */}
           <div className="contacto-formulario">
             <h2>Envíanos un mensaje</h2>
-
             <form id="formularioContacto" onSubmit={manejarSubmit}>
+
+              {/* Nombre y Apellido */}
               <div className="fila">
                 <div className="campo">
                   <label>Nombre</label>
-                  <input type="text" className="campo-contacto" required />
+                  <input
+                    className={`campo-contacto ${clase(nombre, nombreOk)}`}
+                    value={nombre}
+                    onChange={(e) => setNombre(e.target.value)}
+                    placeholder="Tu nombre"
+                  />
+                  {nombre !== "" && (
+                    <p className={"pista " + (nombreOk ? "ok" : "mal")}>
+                      {nombreOk ? "Correcto" : "Solo letras y espacios"}
+                    </p>
+                  )}
                 </div>
 
                 <div className="campo">
                   <label>Apellido</label>
-                  <input type="text" className="campo-contacto" required />
+                  <input
+                    className={`campo-contacto ${clase(apellido, apellidoOk)}`}
+                    value={apellido}
+                    onChange={(e) => setApellido(e.target.value)}
+                    placeholder="Tu apellido"
+                  />
+                  {apellido !== "" && (
+                    <p className={"pista " + (apellidoOk ? "ok" : "mal")}>
+                      {apellidoOk ? "Correcto" : "Solo letras y espacios"}
+                    </p>
+                  )}
                 </div>
               </div>
 
+              {/* Correo */}
               <div className="campo">
                 <label>Correo electrónico</label>
-                <input type="email" className="campo-contacto" required />
+                <input
+                  className={`campo-contacto ${clase(correo, correoOk)}`}
+                  value={correo}
+                  onChange={(e) => setCorreo(e.target.value)}
+                  placeholder="tucorreo@ejemplo.com"
+                />
+                {correo !== "" && (
+                  <p className={"pista " + (correoOk ? "ok" : "mal")}>
+                    {correoOk ? "Correcto" : "Formato de correo inválido"}
+                  </p>
+                )}
               </div>
 
+              {/* Teléfono */}
               <div className="campo">
                 <label>Teléfono / WhatsApp</label>
-                <input type="text" className="campo-contacto" required />
+                <input
+                  className={`campo-contacto ${clase(telefono, telefonoOk)}`}
+                  value={telefono}
+                  onChange={(e) => setTelefono(e.target.value)}
+                  placeholder="9XXXXXXXXX"
+                />
+                {telefono !== "" && (
+                  <p className={"pista " + (telefonoOk ? "ok" : "mal")}>
+                    {telefonoOk ? "Correcto" : "Debe empezar con 9 y tener 9 dígitos"}
+                  </p>
+                )}
               </div>
 
-              {/* Select para elegir el motivo de la consulta */}
+              {/* Opción de ayuda */}
               <div className="campo">
                 <label>¿En qué podemos ayudarte?</label>
-                <select className="campo-contacto" required>
+                <select
+                  className={`campo-contacto ${opcion === "" ? "mal" : "ok"}`}
+                  value={opcion}
+                  onChange={(e) => setOpcion(e.target.value)}
+                >
                   <option value="">Seleccionar...</option>
                   <option>Consulta sobre productos</option>
                   <option>Consulta sobre sistemas</option>
@@ -76,18 +155,33 @@ function Contacto() {
                 </select>
               </div>
 
+              {/* Mensaje */}
               <div className="campo">
                 <label>Mensaje</label>
-                <textarea className="campo-contacto" rows="5" required></textarea>
+                <textarea
+                  className={`campo-contacto ${clase(mensajeTexto, mensajeOk)}`}
+                  rows="5"
+                  value={mensajeTexto}
+                  onChange={(e) => setMensajeTexto(e.target.value)}
+                  placeholder="Escribe tu mensaje aquí..."
+                />
+                {mensajeTexto !== "" && (
+                  <p className={"pista " + (mensajeOk ? "ok" : "mal")}>
+                    {mensajeOk ? "Correcto" : "Debe contener al menos 20 caracteres"}
+                  </p>
+                )}
               </div>
 
+              {/* Mensajes dinámicos */}
+              {mensaje && <p className="mensaje-confirmacion">{mensaje}</p>}
+              {error && <p className="error">{error}</p>}
+              {exito && <p className="exito">{exito}</p>}
+
+              {/* Botón */}
               <button type="submit" className="btn-enviar">
                 Enviar mensaje
               </button>
             </form>
-
-            {/* Mensaje que aparece despues de enviar el formulario */}
-            {mensaje && <p className="mensaje-confirmacion">{mensaje}</p>}
           </div>
 
           {/* Columna derecha: informacion de contacto */}
