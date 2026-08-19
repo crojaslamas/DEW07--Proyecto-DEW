@@ -302,6 +302,34 @@ color: red;
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* ===== Menú colapsable en móviles ===== */
+@media (max-width: 768px) {
+  .menu {
+    padding: 15px 30px;
+  }
+
+  .menu nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: none; 
+  }
+
+  .menu nav.show {
+    display: flex; 
+  }
+
+  .hamburguesa {
+    display: flex; 
+  }
+}
+
 /* ===== Menú en escritorio ===== */
 .nav-links {
   display: flex;
@@ -311,14 +339,6 @@ color: red;
 
 /* ===== Menú en móviles ===== */
 @media (max-width: 768px) {
-  .menu {
-    padding: 15px 30px;
-  }
-
-  .hamburguesa {
-    display: flex; /* aparece en móviles */
-  }
-
   .nav-links {
     position: absolute;
     top: 70px;
@@ -335,7 +355,7 @@ color: red;
   }
 
   .nav-links.show {
-    display: flex; 
+    display: flex;
   }
 
   .nav-links a {
@@ -364,6 +384,7 @@ color: red;
   }
 
   .icono-carrito span {
+    position: static; 
     background: red;
     color: white;
     border-radius: 50%;
